@@ -1,0 +1,73 @@
+<div>
+    <div class="card" style="width: 100%; margin-left: 2%; margin-top: 2%; border-radius: 15px;" dir="rtl">
+      <div class="card-body">
+        <div class="container">
+            <div class="row">
+            <div class="col-8">
+                <h6 class="card-subtitle mb-2 text-body-secondary resourceheader">{{ "Determine the supplier's working hours" | translate }}</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary resourcesubheader">{{ "Configure your week settings here. Simply move the sliders and add/remove break times to set up work hours." | translate }}</h6>
+            </div>
+         <div class="col-4">
+            <nav class=" navbar-expand-lg " style="background-color: linear-gradient(0deg, #F5F5F5, #F5F5F5),
+            linear-gradient(0deg, #FBFBFB, #FBFBFB); border-radius: 10px;
+            ">
+                <div class="container-fluid">
+                  <button class="btn navbarbtn" (click)="selectedButton = 'button1'" [ngClass]="{'active': selectedButton === 'button1'}" style="margin-left: 0.25em;">{{"Traditional settings"|translate}}</button>
+                  <button class="btn ms-2 navbarbtn" (click)="selectedButton = 'button2'" [ngClass]="{'active': selectedButton === 'button2'}">{{"Advanced Settings"|translate}}</button>
+                </div>
+              </nav>
+         </div>
+        </div>
+          <div class="row" *ngFor="let day of days; let i = index">
+            <div class="row" style="margin-right: 30%;" *ngIf="isRadioChecked[i]">
+            <h6 class="card-subtitle mb-2 text-body-secondary timepickheader col-4" >{{ "Starts from" | translate }}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary timepickheader col" >{{ "Ends at" | translate }}</h6>
+        </div>
+            <div class="form-switch col-3" style="margin: 1em 1em;">
+              <input class="form-check-input"  type="checkbox" role="switch" id="flexSwitchCheckChecked" (change)="onRadioChange(i,day)"/>
+             
+              <span class="form-check-label"  for="flexSwitchCheckChecked" style="position: relative; right: 3em;" >
+                {{ day | translate }}
+              </span>
+            </div>
+            
+            <div class=" col-8" *ngIf="isRadioChecked[i]" >
+                <div class="row" *ngFor="let item of createArray(numberofitems[i])">
+
+              <div class="col row">
+               
+                <div class="input-group mb-3">
+                   
+                         
+                    <input type="time" id="start-time" name="appt" class="form-control" aria-label="Text input with dropdown button">
+                          
+                          <p style="margin-right: 1em;">--</p>
+                         
+                        </div>
+                   
+              </div>
+  
+              <div class="col">
+                <div class="input-group mb-3">
+                    
+                    <input type="time" id="end-time" name="appt" class="form-control"  aria-label="Text input with dropdown button">
+
+                   
+                  </div>
+               
+                </div>
+                <div class="col-1 center">
+<button style="border-radius: 50%;border: transparent;" (click)="Additems(i)">+</button>
+                </div>
+                <div class="col-1 centered-image" style="background-color: rgba(231, 234, 237, 0.59);border-radius: 10px;transform: scale(0.65);margin-top: -20px;">
+                    <img src="../../../assets/images/copy.png" style="transform: scale(0.75);cursor: pointer;" (click)="copy()">
+                </div>
+                
+              </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+
+  </div>

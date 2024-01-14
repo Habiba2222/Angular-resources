@@ -1,0 +1,101 @@
+<div >
+ 
+ <div class="container" style="width: 30em; margin-left: 20px;" >
+  <div class="row align-items-start ">
+    <button type="button" class="btn btn-light col btn-sm delbtn headerbtn">
+      <label style="width: 70%;">{{"Delete resource"|translate}}</label>
+      <img src="../../../assets/images/trash.png">
+    </button>
+    <button type="button" class="btn btn-dark col btn-sm savebtn headerbtn" style="margin: 1em 1em;">
+      <label style="width: 100%;">{{"Saving changes"|translate}}</label></button>
+  <div class="form-switch col " style="margin-top: 2em;margin-left:1em;transform: scale(1.25);">
+    <span class="form-check-label" for="flexSwitchCheckChecked" style="position: absolute;">
+      {{'Activated'|translate}}
+    </span>
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+  </div>
+</div>
+</div>
+
+  <div class="card" style="width: 100%; margin-left: 5%;border-radius: 15px;padding-bottom: 1%;" dir="rtl">
+    <div class="card-body">
+     
+      <h6 class="card-subtitle mb-2 text-body-secondary resourceheader">{{'The resource is available to'|translate }}</h6>
+      <div class="container">
+        <div class="row justify-content-start">
+      <input type="number" min="0" step="1" class="form-control col-7 remborder" id="amountInput" (keypress)="validateNo($event)" style="width: 70%;border-radius: 0 9px 9px 0;">
+     
+      <div class="dropdown col-2 timedropdown" style="padding-right:0;">
+        <button class="btn dropdown-toggle remborder" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{selectedValue|translate}} 
+        </button>
+        <ul dropdownMenu class="dropdown-menu">
+          <li *ngFor="let time of values"  (click)="selectValue(time)"
+              class="dropdown-item" style="cursor: pointer;">{{time|translate}}
+          </li>
+        </ul>
+      </div>
+     </div>
+     </div>
+     <h6 class="card-subtitle mb-2 text-body-secondary resourceheader" style="margin-top: 1em;">{{'Resource time'|translate }}</h6>
+     <div class="container" style="padding-right: 0;">
+      <div class="row justify-content-start">
+        <div class="form-check col">
+          <input type="radio" name="flexRadioDefault" id="flexRadio"  (change)="onRadioChange('Servicetime')">
+          <img src="../../../assets/images/box-time.png" style="margin-left: 0.5em;">
+          <label class="form-check-label" for="flexRadio" class="cardlabels">
+           {{'Service time'|translate}}
+          </label>
+        </div>
+        <div class="form-check col">
+          <input type="radio" name="flexRadioDefault" id="flexRadio" (change)="onRadioChange('Constanttime')">
+          <img src="../../../assets/images/clock.png" style="margin-left: 0.5em;">
+          <label class="form-check-label" for="flexRadio" class="cardlabels">
+           {{'Constant time'|translate}}
+          </label>
+        </div>
+        <div class="input-group col" *ngIf="selectedTime==='Constanttime'">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" (click)="decrease()" style=" background: rgba(7, 113, 222, 1);color: white;transform: scale(0.8);margin-left: -0.2em;">-</button>
+          </div>
+          <input type="number" class="form-control" [(ngModel)]="resourcetime"  aria-label="Minutes" style="background-color:rgba(246, 242, 242, 1);
+          ; border: 1px solid rgba(217, 217, 217, 1);">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="increase()" style=" background: rgba(7, 113, 222, 1);color: white;transform: scale(0.75);margin-right: -0.2em;">+</button>
+          </div>
+        </div>
+        
+      
+   </div>
+   </div>
+   <div class="row">
+   <h6 class="card-subtitle mb-auto text-body-secondary resourceheader col-auto " style="margin-top: 1em;padding-left: 0px;">{{'Multiple booking'|translate }}</h6>
+   <img src="../../../assets/images/info-circle.png" class="col-1 reservationicon" >
+  </div>
+  <div class="row justify-content-start">
+    <div class="form-check col-4">
+      <input type="radio" name="flexRadioDefault2" id="flexRadio"  (change)="onReservationchange('oneperson')">
+      <img src="../../../assets/images/oneperson.png" style="margin-left: 0.5em;">
+      <label class="form-check-label" for="flexRadio" class="cardlabels">
+       {{'Only one reservation'|translate}}
+      </label>
+    </div>
+    <div class="form-check col-5">
+      <input type="radio" name="flexRadioDefault2" id="flexRadio" (change)="onReservationchange('manypeople')">
+      <img src="../../../assets/images/manypeople.png" style="margin-left: 0.5em;">
+      <label class="form-check-label" for="flexRadio" class="cardlabels">
+       {{'Booking more than one person for the same appointment'|translate}}
+      </label>
+    </div>
+    <div class="col-3" *ngIf="reservation==='manypeople'">
+     
+  
+      <input type="number"  step="1" max="" value="50" name="quantity" class="col-8 form-control" style="background-color:rgba(246, 242, 242, 1);">
+  
+    
+    </div> 
+</div>
+    </div>
+  </div>  
+    
+  </div>

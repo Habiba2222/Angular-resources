@@ -1,0 +1,38 @@
+{
+    "Card title":"ايلين",
+    "The resource is available to":"المورد متاح إلى",
+    "Activated":"مفعلة",
+    "month":"شهر",
+    "year":"سنة",
+    "Resource time":"وقت المورد",
+    "Service time":"وقت الخدمة",
+    "Delete resource":"حذف المورد",
+    "Saving changes":"حفظ التغييرات",
+    "Constant time":"الوقت ثابت",
+    "Multiple booking":"الحجز المتعدد",
+    "Only one reservation":"حجز واحد فقط",
+    "Booking more than one person for the same appointment":"حجز اكثر من شخص لنفس الموعد",
+
+
+    "Resource name":"اسم الموارد",
+    "Choose the resource type":"اختر نوع الموارد",
+    "Book during the day":"حجز خلال اليوم",
+    "Booking period (more than one day)":"حجز مدة ( أكثر من يوم )",
+
+
+    "Determine the supplier's working hours":"حدد مواعيد العمل للمورد",
+    "Configure your week settings here. Simply move the sliders and add/remove break times to set up work hours.":
+    "تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة / إزالة أوقات الراحة لإعداد ساعات العمل.",
+    "Saturday":"السبت",
+    "Sunday":"الأحد",
+    "Monday":"الاثنين",
+    "Tuesday":"الثلاثاء",
+    "Wednesday":"الأربعاء",
+    "Thursday":"الخميس",
+    "Friday":"الجمعة",
+    "Starts from":"وقت البدء",
+    "Ends at":"وقت الإنتهاء",
+    "Traditional settings":"إعدادات تقليدية",
+    "Advanced Settings":"إعدادات متقدمة",
+    "Add new resources":"إضافة موارد جديدة"
+}

@@ -1,0 +1,110 @@
+h1 {
+    color: #333;
+  }
+  
+  form {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  .resourceheader
+  {
+    font-family: "Times New Roman";
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+color: #92A1AD !important;
+
+/* text-align: left; */
+
+  }
+  input[type="radio"] {
+    -ms-transform: scale(1.25); /* IE 9 */
+    -webkit-transform: scale(1.25); /* Chrome, Safari, Opera */
+    transform: scale(1.25);
+    border: 3px solid #E0E5F2;
+    opacity: 0.5;
+   
+    margin-left: 0.5em;
+  }
+  .cardlabels
+  {
+    font-family: "Times New Roman";
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+color: #1C1C28;
+  }
+  .headerbtn
+  {
+    margin: 1em 1em;
+    padding: 0.75em 0.75em;
+    border-radius:9px;
+    font-family: "Times New Roman";
+font-size: 16px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0em;
+-ms-transform: scale(1.15,1); /* IE 9 */
+-webkit-transform: scale(1.15,1); /* Chrome, Safari, Opera */
+transform: scale(1.15,1);
+  }
+  .delbtn
+  {
+    border: 1px solid #FF4B55 ;   
+    color:  #FF4B55;
+  }
+  .savebtn
+  {
+    font-family: "Times New Roman";
+font-size: 16px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0em;
+  }
+  .timedropdown
+  { 
+    border-radius:  9px  0 0px 9px;
+    border: 1px;
+    background:
+    linear-gradient(0deg, #ECF1F6, #ECF1F6);
+    
+    border: 1px solid rgba(231, 231, 232, 1) !important;
+  }
+  .remborder :focus 
+  {
+   outline: none !important;
+  }
+
+  /* ///////////// */
+  #specifytime::-webkit-outer-spin-button,
+  #specifytime::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  #specifytime{
+    width: 70% !important;
+  }
+  #specifytime[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .reservationicon
+  {
+    -ms-transform: scale(0.55); /* IE 9 */
+-webkit-transform: scale(0.55); /* Chrome, Safari, Opera */
+transform: scale(0.55);
+padding-right: 0px;
+margin-top: 0.25em;
+  }
